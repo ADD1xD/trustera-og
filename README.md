@@ -127,7 +127,7 @@ To build a trusted bounty economy powered by real humans, where contributors are
 ## Getting Started
 
 ```bash
-git clone https://github.com/your-username/trustera
+git clone https://github.com/add1xd?trustera-og
 cd trustera
 npm install
 npm run dev
