@@ -1,76 +1,133 @@
-# BOUNTYX
+# Trustera
 
-**The Trustless Bounty Marketplace on Arbitrum.**
-
-BountyX is a decentralized platform where builders compete for bounties, and creators pay instantly using onchain protocols. We replace the "middleman trust" of Web2 freelancing with "cryptographic truth."
-
----
-
-## ⚡ Core Features
-
-### 🔐 Trustless x402 Payments
-BountyX uses the **x402 Protocol** (HTTP 402 Payment Required) to treat payments as native web primitives.
-*   **Pre-Funded Escrow**: When a creator posts a bounty, the full prize pool is locked onchain in USDC. No "I'll pay you later."
-*   **Instant Settlement**: Winners are paid programmatically in USDC on Arbitrum Sepolia. Payouts take seconds, not weeks.
-*   **Zero Fees**: We don't take a 20% cut. You pay verified network gas and a minimal protocol fee.
-
-### 🛡️ Protocol Hardening (Security)
-The platform is built to resist economic exploits and trust leaks.
-*   **Strict Funding Integrity**: The backend enforces a strict equality check (`AmountPaid === Sum(Prizes) + Fee`). Every cent is accounted for before a bounty goes live.
-*   **Submission Anchoring**: Every submission is hashed (`SHA-256`) and anchored to the current Arbitrum block number. This proves *exactly* what was submitted and *when*, preventing timestamp spoofing or retroactive edits.
-*   **Clawback Mechanism**: Creators can cancel and refund their own bounties if they are expired (> 30 days) or have zero interaction, protecting their funds from being stuck in dead bounties.
-
-### 🏆 Multi-Prize Architecture
-Not just "winner takes all." BountyX supports complex prize structures.
-*   **Prize Tiers**: Creators can define multiple winners (e.g., 1st Place: $1000, 2nd: $500, 3rd: $200).
-*   **Flexibility**: Perfect for hackathons, design contests, or audit contests where multiple contributions add value.
-
-### 👤 Onchain Reputation V2
-A meritocratic identity system that rewards skill, not just volume.
-*   **Weighted Reputation Score**: Your score isn't just points. It's calculated as `Total Earnings × Win Rate`. This penalizes spammers who submit low-quality work (low win rate) and rewards consistent high-performers.
-*   **Verified Badge**: Pro-hunters with a Reputation Score > 500 receive a protocol verification badge (✓), signaling reliability to creators.
-*   **Public Profiles**: All history—created bounties, wins, and losses—is public and onchain.
-
-### 🤖 Auditable AI Evaluation
-We use **Gemini 2.0 Flash** to provide instant, objective feedback on submissions.
-*   **Code Analysis**: AI reviews code for security, efficiency, and cleanliness immediately upon submission.
-*   **Transparent Logs**: Unlike "black box" algorithms, every AI review, prompt, and reasoning score is logged to a public database table. You can audit exactly *why* the AI gave a certain score.
+**Verified human bounty and feedback platform on World Chain.**  
+Test. Build. Earn USDC.
 
 ---
 
-## 🏗️ Technical Architecture
+## Overview
 
-BountyX is built on a modern "Local-First, Cloud-Last" stack:
+Trustera is a decentralized bounty and feedback platform where only **World verified humans** can participate.
 
--   **Frontend**: Next.js 14 (App Router) with TypeScript.
--   **Styling**: **Neo-Brutalism**. Hard shadows, thick borders, high-contrast colors (Neon Green/Pink). Designed for maximum clarity.
--   **Auth**: **Privy** for seamless embedded wallets. Login with Email/Socials, get a wallet instantly.
--   **Database**: **Supabase** (PostgreSQL) with Row Level Security (RLS).
--   **Chain**: **Arbitrum Sepolia** testnet.
+It enables users to complete tasks, test products, provide meaningful feedback, and earn rewards in **USDC**, while helping builders receive **high-quality, spam-free contributions**.
+
+Built on **World Chain**, Trustera creates a more trustworthy and transparent ecosystem for both creators and contributors.
 
 ---
 
-## 🚀 Getting Started
+## Problem
 
-### Installation
+Most bounty platforms today suffer from:
+
+- Fake users and bot participation  
+- Spam submissions  
+- Low-quality feedback  
+- Lack of trust between creators and contributors  
+
+This leads to poor outcomes and wasted resources.
+
+---
+
+## Solution
+
+Trustera introduces **verified human participation**.
+
+Only users verified through the World ecosystem can:
+
+- Access bounties  
+- Submit work  
+- Earn rewards  
+
+This ensures:
+
+- Authentic engagement  
+- Higher quality submissions  
+- Fair reward distribution  
+
+---
+
+## Features
+
+- **Verified Human Access**  
+  Only World verified users can participate  
+
+- **Bounty and Feedback Tasks**  
+  Includes:
+  - Product testing  
+  - User feedback  
+  - Campaign participation  
+  - Community engagement  
+
+- **Instant USDC Rewards**  
+  Paid directly onchain  
+
+- **Transparent System**  
+  Clear and trackable interactions  
+
+- **Spam Resistant**  
+  No bots or fake submissions  
+
+---
+
+## How It Works
+
+1. **Connect and Verify**  
+   Users connect their wallet and verify via the World ecosystem  
+
+2. **Browse or Post Tasks**  
+   Creators post bounties or feedback tasks  
+   Users explore available opportunities  
+
+3. **Submit Work**  
+   Users complete tasks and submit directly on the platform  
+
+4. **Review and Reward**  
+   Submissions are reviewed and approved  
+   Rewards are sent instantly in USDC on World Chain  
+
+---
+
+## Tech Stack
+
+- World Chain  
+- World ID (verification)  
+- Smart contracts  
+- Web3 wallet integration  
+
+---
+
+## Use Cases
+
+- Product testing  
+- UX feedback  
+- Growth campaigns  
+- Community engagement  
+- Developer bounties  
+
+---
+
+## Team
+
+**Team Magic**
+
+- **Aditya**  
+  Developer focused on product and marketing  
+
+- **Rohan**  
+  Student and developer focused on Web3 and privacy  
+
+---
+
+## Vision
+
+To build a trusted bounty economy powered by real humans, where contributors are rewarded fairly and builders receive genuine, high-quality input.
+
+---
+
+## Getting Started
+
 ```bash
-# 1. Clone the repo
-git clone https://github.com/yourusername/bountyx.git
-
-# 2. Install dependencies
+git clone https://github.com/your-username/trustera
+cd trustera
 npm install
-
-# 3. Setup Environment
-# Copy .env.example to .env.local and fill in your keys (Privy, Supabase, Gemini)
-```
-
-### Running Locally
-```bash
 npm run dev
-# Open http://localhost:3000
-```
-
----
-
-## 📜 License
-MIT Open Source. Built for the **Arbitrum** ecosystem.
