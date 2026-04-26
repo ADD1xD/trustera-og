@@ -3,6 +3,8 @@
 **Verified human bounty and feedback platform on World Chain.**  
 Test. Build. Earn USDC.
 
+https://trustera-beta.vercel.app/
+
 ---
 
 ## Overview
